@@ -85,9 +85,9 @@ const Profile = () => {
                                 typeof WebApp.openLink === 'function';
       
       if (isWebAppAvailable) {
-        WebApp.openLink('https://www.period.org/donate');
+        WebApp.openLink('/');
       } else {
-        window.open('https://www.period.org/donate', '_blank');
+        window.open('/', '_blank');
       }
       
       toast({
@@ -96,7 +96,7 @@ const Profile = () => {
       });
     } catch (e) {
       console.error("Failed to open link", e);
-      window.open('https://www.period.org/donate', '_blank');
+      window.open('/', '_blank');
     }
   };
   
