@@ -1,0 +1,146 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 335 20% 99%;
+    --foreground: 335 10% 15%;
+
+    --card: 335 20% 98%;
+    --card-foreground: 335 10% 15%;
+
+    --popover: 335 20% 98%;
+    --popover-foreground: 335 10% 15%;
+
+    --primary: 335 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 335 20% 93%;
+    --secondary-foreground: 335 10% 25%;
+
+    --muted: 335 10% 93%;
+    --muted-foreground: 335 10% 45%;
+
+    --accent: 335 70% 95%;
+    --accent-foreground: 335 80% 40%;
+
+    --destructive: 0 90% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 335 20% 90%;
+    --input: 335 20% 90%;
+    --ring: 335 80% 60%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 335 20% 99%;
+    --sidebar-foreground: 335 10% 15%;
+    --sidebar-primary: 335 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 335 20% 93%;
+    --sidebar-accent-foreground: 335 10% 25%;
+    --sidebar-border: 335 20% 90%;
+    --sidebar-ring: 335 80% 60%;
+  }
+
+  .dark {
+    --background: 335 30% 10%;
+    --foreground: 335 10% 95%;
+
+    --card: 335 30% 12%;
+    --card-foreground: 335 10% 95%;
+
+    --popover: 335 30% 12%;
+    --popover-foreground: 335 10% 95%;
+
+    --primary: 335 70% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 335 30% 15%;
+    --secondary-foreground: 335 10% 95%;
+
+    --muted: 335 20% 20%;
+    --muted-foreground: 335 10% 65%;
+
+    --accent: 335 30% 20%;
+    --accent-foreground: 335 70% 75%;
+
+    --destructive: 0 90% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 335 30% 20%;
+    --input: 335 30% 20%;
+    --ring: 335 70% 65%;
+
+    --sidebar-background: 335 30% 10%;
+    --sidebar-foreground: 335 10% 95%;
+    --sidebar-primary: 335 70% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 335 30% 15%;
+    --sidebar-accent-foreground: 335 10% 95%;
+    --sidebar-border: 335 30% 20%;
+    --sidebar-ring: 335 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border selection:bg-mate-300/20 selection:text-mate-950 dark:selection:bg-mate-300/30 dark:selection:text-mate-50;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/40 border border-white/40 shadow-glass transition-all duration-300 hover:shadow-glass-hover dark:bg-black/20 dark:border-white/10;
+  }
+  
+  .neo-card {
+    @apply bg-background shadow-neo dark:shadow-neo-dark rounded-2xl border border-border/5;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
