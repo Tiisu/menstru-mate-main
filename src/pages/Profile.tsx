@@ -146,12 +146,12 @@ const Profile = () => {
       <div className="glass-card rounded-3xl p-5 mb-6 animate-scale-in">
         <div className="flex items-center">
           <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
-            <span className="text-primary text-xl font-semibold">JD</span>
+            <span className="text-primary text-xl font-semibold">TS</span>
           </div>
           
           <div className="ml-4">
-            <h2 className="text-lg font-semibold">Jane Doe</h2>
-            <p className="text-muted-foreground">jane.doe@example.com</p>
+            <h2 className="text-lg font-semibold">Tiisu Sharif</h2>
+            <p className="text-muted-foreground">tiisusharif@gmail.com</p>
           </div>
         </div>
         
